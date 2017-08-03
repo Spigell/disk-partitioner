@@ -85,7 +85,8 @@ Hash of parameters:
  - type
 
 Desired filesystem for creation. 
-*Note* for fat fylesystem you must install `dosfstools`.
+
+*Note* for fat filesystem you must install `dosfstools`.
 
  - fs_option
 
