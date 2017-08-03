@@ -24,7 +24,7 @@ This example shows how to make table, create one empty partition and one xfs par
       )
     );
 
-    task_run 'simple creation', 'dev-disk-partitioner', %(
+    task_run 'simple creation', 'disk-partitioner', %(
       partition => %(
         target => "/dev/sdb",
         start  => '2M',
