@@ -42,8 +42,8 @@ This example shows how to make table, create one empty partition and one xfs par
         ),
       start  => '400M',
       end    => '500M',
-  ),
-);
+        ),
+      );
 
 # Parameters
 ## table part
@@ -83,10 +83,12 @@ May be a string or a array.
 ### fs
 Hash of parameters:
  - type
+
 Desired filesystem for creation. 
 *Note* for fat fylesystem you must install `dosfstools`.
 
  - fs_option
+
 Option for creation of filesystem.
 
 # See also
@@ -95,6 +97,4 @@ Option for creation of filesystem.
 [sparrow](https://github.com/melezhik/sparrow)
 
 [parted](https://www.gnu.org/software/parted/manual/parted.html)
-
-
 
