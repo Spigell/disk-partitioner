@@ -56,7 +56,7 @@ Choose type of table. See all in [parted documentation](https://www.gnu.org/soft
 Also for msdos there are aliases: `mbr` and `dos`.
 
 ### recreate
-Make new one disk's table despite an existing one.
+Make new one disk's table despite an existing one. Default is `false`.
 
 ## partition part
 ### target
@@ -78,10 +78,11 @@ End of partition.
 ### flags
 Set flags for the partition. One can set multiple flags. 
 
-May be a string or a array.
+May be a string or an array.
 
 ### fs
 Hash of parameters:
+
  - type
 
 Desired filesystem for creation. 
