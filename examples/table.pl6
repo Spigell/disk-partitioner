@@ -10,6 +10,9 @@ task_run 'create table', 'dev-disk-partitioner', %(
     target => "$disk",
   ),
 );
+bash "sudo parted $disk print", %(
+  expect_stdout => 'dos'
+);
 task_run 'try to create table once more', 'dev-disk-partitioner', %(
   table => %(
     type => 'gpt',
@@ -23,4 +26,8 @@ task_run 'create gpt table force', 'dev-disk-partitioner', %(
     target => "$disk",
     recreate => 'true'
   ),
+);
+
+bash "sudo parted $disk print", %(
+  expect_stdout => 'gpt'
 );
